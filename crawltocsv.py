@@ -73,5 +73,5 @@ def main(query):
     save_to_csv(results)
 
 # Example usage
-query = "cloud migration services"
+query = "saas services near me"
 main(query)
