@@ -73,11 +73,7 @@ def main(query):
     save_to_csv(results)
 
 # Example usage
-<<<<<<< HEAD
-query = "Firewall security solutions in Delhi NCR "
-=======
-query = "Data storage solutions "
->>>>>>> aaa651c264ac022f47d66a84524858a929c72318
+query = "it solutions"
 main(query)
 
 #it consulting companies in delhi ncr
@@ -96,10 +92,3 @@ main(query)
 #api parameter changed
 #msp provider
 #it solutions
-<<<<<<< HEAD
-#Firewall security solutions in Delhi NCR 
-=======
-    # network security solutions
-    # Cybersecurity services
-    # Cisco networking solutions
->>>>>>> aaa651c264ac022f47d66a84524858a929c72318
