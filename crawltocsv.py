@@ -73,5 +73,23 @@ def main(query):
     save_to_csv(results)
 
 # Example usage
-query = "saas services near me"
+query = "Firewall security solutions in Delhi NCR "
 main(query)
+
+#it consulting companies in delhi ncr
+#it consulting firms in delhi ncr
+#it solutions delhi ncr
+#it consultancy delhi ncr
+#it companies delhi ncr
+#it services delhi ncr
+#msp provider delhi ncr
+#msp delhi ncr
+#it services gurugram
+#it services noida
+#it services delhi
+
+
+#api parameter changed
+#msp provider
+#it solutions
+#Firewall security solutions in Delhi NCR 
