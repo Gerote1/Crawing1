@@ -74,7 +74,7 @@ def main(query):
     save_to_csv(results)
 
 # Example usage
-query = "it solutions"
+query = "Cloud computing solutions"
 main(query)
 
 #it consulting companies in delhi ncr
@@ -93,3 +93,8 @@ main(query)
 #api parameter changed
 #msp provider
 #it solutions
+#why i need it consulting for my business
+#it firms near me
+#Enterprise IT solutions
+#Managed IT services
+#
