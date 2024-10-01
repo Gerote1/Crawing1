@@ -1,20 +1,19 @@
-from serpapi import GoogleSearch
+import serpapi
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 import csv
 
-# Function to get the first 50 Google search results
+# Function to get the Google search results from SerpApi
 def get_google_results(query):
+    client = serpapi.Client(api_key="4a7c367bf5517d0d113bef4359092091d6766b7f42a4fed6326457835ff2b816")  # Use your SerpApi key here
     params = {
-        "q": query,
-        "num": 100,  # Get 50 results
-        "location":"New Delhi",
-        "api_key": "4a7c367bf5517d0d113bef4359092091d6766b7f42a4fed6326457835ff2b816"  # You need to get a SerpApi key
+        'engine': 'google',
+        'q': query,
+        'num': 50  # Number of results to get
     }
-    search = GoogleSearch(params)
-    results = search.get_dict()
-    links = [result['link'] for result in results['organic_results']]
+    results = client.search(params)
+    links = [result['link'] for result in results['organic_results']]  # Collect links from SerpApi response
     return links
 
 # Function to crawl each website and extract domain, title, and description
@@ -39,14 +38,14 @@ def crawl_website(url):
         return {"domain": url, "title": "Error", "description": str(e)}
 
 # Function to save the data to a CSV file
-def save_to_csv(data, filename='results2.csv'):
+def save_to_csv(data, filename='results.csv'):
     headers = ['Domain', 'Title', 'Description']
     
     # Open the file in write mode
     with open(filename, 'a', newline='', encoding='utf-8') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=headers)
         
-        # Write the header
+        # Write the header if the file is new
         writer.writeheader()
         
         # Write each row of data
@@ -74,7 +73,7 @@ def main(query):
     save_to_csv(results)
 
 # Example usage
-query = "Cloud computing solutions"
+query = "Data storage solutions "
 main(query)
 
 #it consulting companies in delhi ncr
@@ -93,8 +92,6 @@ main(query)
 #api parameter changed
 #msp provider
 #it solutions
-#why i need it consulting for my business
-#it firms near me
-#Enterprise IT solutions
-#Managed IT services
-#
+    # network security solutions
+    # Cybersecurity services
+    # Cisco networking solutions
