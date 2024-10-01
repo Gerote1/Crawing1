@@ -8,7 +8,8 @@ import csv
 def get_google_results(query):
     params = {
         "q": query,
-        "num": 50,  # Get 50 results
+        "num": 100,  # Get 50 results
+        "location":"New Delhi",
         "api_key": "4a7c367bf5517d0d113bef4359092091d6766b7f42a4fed6326457835ff2b816"  # You need to get a SerpApi key
     }
     search = GoogleSearch(params)
@@ -38,7 +39,7 @@ def crawl_website(url):
         return {"domain": url, "title": "Error", "description": str(e)}
 
 # Function to save the data to a CSV file
-def save_to_csv(data, filename='results.csv'):
+def save_to_csv(data, filename='results2.csv'):
     headers = ['Domain', 'Title', 'Description']
     
     # Open the file in write mode
@@ -73,7 +74,7 @@ def main(query):
     save_to_csv(results)
 
 # Example usage
-query = "msp provider delhi ncr"
+query = "it solutions"
 main(query)
 
 #it consulting companies in delhi ncr
@@ -83,3 +84,12 @@ main(query)
 #it companies delhi ncr
 #it services delhi ncr
 #msp provider delhi ncr
+#msp delhi ncr
+#it services gurugram
+#it services noida
+#it services delhi
+
+
+#api parameter changed
+#msp provider
+#it solutions
